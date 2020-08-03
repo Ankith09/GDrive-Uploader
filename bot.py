@@ -262,7 +262,7 @@ dp.add_handler(update_status)
 start_handler = CommandHandler('start', start)
 dp.add_handler(start_handler)
 
-downloader_handler = MessageHandler(Filters.regex(r'http'), UPLOAD)
+downloader_handler = CommandHandler('Upload', UPLOAD)
 dp.add_handler(downloader_handler)
 
 help_handler = CommandHandler('help', help)
